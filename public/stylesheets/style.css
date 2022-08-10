@@ -235,6 +235,32 @@ h1 .underline::before {
   }
 }
 
+#clients {
+  background-color: #000000;
+  padding: 50px;
+  text-align: center;
+}
+
+#clients img {
+  width: 225px;
+}
+
+@media (max-width: 600px) {
+  #clients img {
+    width: 130px;
+  }
+}
+
+#clients h2 {
+  font-size: 2.9m;
+  letter-spacing: 3px;
+  line-height: 39px;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .responsive-img {
   max-width: 100%;
   height: auto;
