@@ -16,3 +16,122 @@ body, html {
   padding: 0;
   font-family: "karla-regular", Helvetica, Arial, sans-serif;
 }
+
+body {
+  font-size: 62.5%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 143px;
+  background-color: #ffffff;
+  padding-top: 20px;
+}
+
+@media (max-width: 600px) {
+  header {
+    height: 50px;
+  }
+}
+
+header nav a {
+  text-decoration: none;
+  margin: 12px;
+  font-size: 2.4em;
+  line-height: 41px;
+  color: #171717;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  header div a, header nav {
+    display: none;
+  }
+}
+
+header div {
+  display: flex;
+  align-items: flex-start;
+}
+
+header nav {
+  margin-top: 20px;
+}
+
+header div > img {
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  header div {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  header div img {
+    width: 50%;
+    margin-top: 0;
+  }
+}
+
+.menu-header-mobile {
+  /*display: none;*/
+  background: red;
+  width: 80%;
+  position: absolute;
+  top: 0;
+  right:100%;
+  transition: right .7s ease-in-out;
+}
+
+
+.menu-header-mobile nav {
+  position: absolute;
+  top: 85px;
+  right: 0;
+  width: 145px;
+}
+
+.menu-header-mobile nav a {
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px solid #000000;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  color: #000;
+}
+
+
+.icon-menu-mobile {
+  position: absolute;
+  top: 5px;
+  right: -60px;
+  font-size: 50px !important;
+}
+
+@media (min-width: 600px) {
+  .icon-menu-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .icon-menu-mobile {
+    top: 10px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+  header div img {
+    width: 100px;
+  }
+  header nav a {
+    font-size: 1.7em;
+  }
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
