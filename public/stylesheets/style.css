@@ -77,11 +77,12 @@ header div > img {
 
 .menu-header-mobile {
   /*display: none;*/
-  background: red;
+  background: #DDDDDD;
   width: 80%;
   position: absolute;
   top: 0;
   right:100%;
+  z-index: 1;
   transition: right .7s ease-in-out;
 }
 
@@ -127,7 +128,87 @@ header div > img {
     width: 100px;
   }
   header nav a {
-    font-size: 1.7em;
+    font-size: 1.6em;
+  }
+}
+
+#banniere {
+  height: 873px;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+  #banniere {
+    -webkit-box-align: inherit;
+    -webkit-align-items: inherit;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+    height: 350px;
+  }
+}
+
+h1 {
+  width: 1233px;
+  height: 181px;
+  font-size: 7em;
+  letter-spacing: 1px;
+  line-height: 102px;
+  color: #000000;
+  margin: auto;
+  text-align: center;
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+  h1 {
+    font-size: 3.5em;
+    max-width: 74%;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3em;
+    max-width: 74%;
+    line-height: 60px;
+  }
+  #banniere {
+    display: inherit;
+    margin-top: 55px;
+  }
+}
+
+h1 > span {
+  white-space: nowrap;
+}
+
+h1 span {
+  position: relative;
+}
+h1 .underline::before {
+  content: url(../images/underline.png);
+  position: absolute;
+  top: 21px;
+  z-index: -1;
+  left: -14px;
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+  h1 .underline::before {
+    content: url(../images/underline_tablette.png);
+    top: -15px;
+    left: -6px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 .underline::before {
+    content: url(../images/underline_mobile.png);
+    top: 0;
+    left: -6px;
   }
 }
 
