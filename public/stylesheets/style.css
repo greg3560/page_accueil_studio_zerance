@@ -19,6 +19,7 @@ body, html {
 
 body {
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 header {
@@ -264,7 +265,6 @@ h1 .underline::before {
 
 .s-wrap {
   width: 100%;
-  margin-bottom: 35px;
   padding-bottom: 47%;
   position: relative;
   background-color: #efefe8;
@@ -513,6 +513,56 @@ figcaption strong .underline::before {
   figcaption strong .underline::before {
     content: url(../images/underline_voir_plus_tablette.png);
     left: -12px;
+  }
+}
+
+#studio {
+  height: 155px;
+  background-color: #ffcd1a;
+  overflow: hidden;
+}
+
+@keyframes defilement-rtl {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(-100%);
+    transform: translate(-100%);
+  }
+}
+
+h3 {
+  font-size: 3.7rem;
+  line-height: 7.0rem;
+  color: #ffffff;
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+  animation: defilement-rtl 15s infinite linear;
+  cursor: pointer;
+  padding: 10px 2em 10px 100%;
+  margin-top: 15px;
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+  h3 {
+    font-size: 1.7rem;
+    line-height: 1rem;
+  }
+  #studio {
+    height: 66px;
+  }
+}
+
+@media (max-width: 600px) {
+  h3 {
+    font-size: 1.4rem;
+    line-height: .8rem;
+  }
+  #studio {
+    height: 66px;
   }
 }
 
