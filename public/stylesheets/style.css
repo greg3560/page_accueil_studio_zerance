@@ -22,12 +22,19 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   display: flex;
   justify-content: space-between;
-  height: 143px;
+  height: 115px;
   background-color: #ffffff;
   padding-top: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 @media (max-width: 600px) {
@@ -58,6 +65,9 @@ header div {
 
 header nav {
   margin-top: 20px;
+  /*position: fixed;*/
+  /*background-color:#ffffff;*/
+  /*right: 0;*/
 }
 
 header div > img {
