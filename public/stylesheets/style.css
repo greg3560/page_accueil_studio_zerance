@@ -32,9 +32,7 @@ header {
   height: 115px;
   background-color: #ffffff;
   padding-top: 20px;
-  position: fixed;
   width: 100%;
-  z-index: 1;
 }
 
 @media (max-width: 600px) {
@@ -579,4 +577,75 @@ h3 {
 .responsive-img {
   max-width: 100%;
   height: auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.4);
+}
+.contact-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 1rem;
+  width: 30%;
+  height: 365px;
+  margin: auto;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #F5F7F8;
+}
+
+.contact-content span.close {
+  position: absolute;
+  right: 16px;
+  cursor: pointer;
+}
+
+.contact-content h5 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0;
+  color: #171717;
+}
+
+.contact-content form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact-content form input {
+  height: 30px;
+}
+
+.contact-content form input, textarea {
+  border-radius: 5px;
+  background-color: #E9EEEF;
+  width: 100%;
+}
+.contact-content form input:focus, textarea {
+  outline:  none;
+}
+
+input[type=submit].valid {
+  background-color: #ffcd1a !important;
+}
+
+input[type=submit] {
+  padding:5px 15px;
+  cursor:pointer;
+}
+
+input:invalid, textarea:invalid, input[type=submit] {
+  border: none;
+}
+
+input:not([type="submit"]):valid, textarea:valid {
+  border: 1px solid green;
 }

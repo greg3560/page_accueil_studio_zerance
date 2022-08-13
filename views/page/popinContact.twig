@@ -1,0 +1,24 @@
+<div id="form-contact" class="popin-contact" style="display: none;">
+    <div class="overlay"></div>
+    <div class="contact-content">
+        <span class="material-symbols-outlined close">close</span>
+        <h5>Contact</h5>
+        <form id="form" method="post" action="/contact">
+            <p>
+                <label for="first-name">Nom</label>
+                <input type="text" name="first-name" id="first-name" placeholder="John" autofocus required />
+            </p>
+            <p>
+                <label for="mail">Mail</label>
+                <input type="mail" name="mail" id="mail" placeholder="exemple@exemple.com" required />
+            </p>
+            <p>
+                <label for="message">Message</label>
+                <textarea id="message" required></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Envoyer" disabled />
+            </p>
+        </form>
+    </div>
+</div>
