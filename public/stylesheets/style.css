@@ -595,11 +595,32 @@ h3 {
   left: 0;
   font-size: 1rem;
   width: 30%;
-  height: 365px;
   margin: auto;
   border-radius: 5px;
   padding: 20px;
   background-color: #F5F7F8;
+}
+
+#form-contact .contact-content {
+  height: 365px;
+}
+
+#confirmation-contact .contact-content {
+  height: 200px;
+}
+
+#confirmation-contact .contact-content a {
+  display: block;
+  width: 100%;
+  background-color: #ffcd1a;
+  text-align: center;
+  padding: 5px;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+#confirmation-contact .contact-content p {
+  text-align: center;
 }
 
 .contact-content span.close {
