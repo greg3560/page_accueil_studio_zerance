@@ -1,22 +1,31 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    /* menu mobile opening */
-    let iconMenu = document.querySelector('.icon-menu-mobile');
+    /*
+        menu mobile opening
+    */
+    let iconsMenu = document.querySelectorAll('.icon-open-menu-mobile, .icon-close-menu-mobile');
     let menuMobile = document.querySelector('.menu-header-mobile');
+    const closeMenuMobile = () => {
+        menuMobile.classList.remove('open');
+        menuMobile.classList.add('close');
+    };
 
-    iconMenu.addEventListener('click', () => {
-        if(this.classList.contains('open')) {
-            menuMobile.style.right = '100%';
-            this.classList.remove('open');
-        } else {
-            menuMobile.style.right = '20%';
-            this.classList.add('open');
-        }
+    iconsMenu.forEach((iconMenu) => {
+        iconMenu.addEventListener('click', (e) => {
+            console.log('this', e.currentTarget);
+            if(menuMobile.classList.contains('open')) {
+                closeMenuMobile();
+
+            } else {
+                menuMobile.classList.remove('close');
+                menuMobile.classList.add('open');
+            }
+        });
     });
 
     /*
         management popins
      */
-    let contactAnchor = document.getElementById('contact');
+    let contactAnchors = document.querySelectorAll('.contact');
     let popinConfirmation = document.getElementById('confirmation-contact');
     let popinContact = document.getElementById('form-contact');
     let closePopinContact = document.querySelector('#form-contact .contact-content span.close');
@@ -25,12 +34,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
         popinContact.style.display = "none";
         popinConfirmation.style.display = "none";
     };
-    contactAnchor.addEventListener('click', () => {
-        let overlayContact = document.querySelector('#form-contact .overlay');
+    contactAnchors.forEach((contactAnchor) => {
+        contactAnchor.addEventListener('click', () => {
+            console.log('conatctAnhor clicked');
+            let overlayContact = document.querySelector('#form-contact .overlay');
 
-        popinContact.style.display = "block";
-        overlayContact.addEventListener('click', () => {
-            popinContact.style.display = "none";
+            closeMenuMobile();
+            popinContact.style.display = "block";
+            overlayContact.addEventListener('click', () => {
+                popinContact.style.display = "none";
+            });
         });
     });
 
