@@ -122,8 +122,6 @@ header div a img {
   width: 140px;
 }
 
-
-
 @media (max-width: 600px) {
   /* toggle icon open menu and icon close menu */
   .menu-header-mobile.close .icon-open-menu-mobile {

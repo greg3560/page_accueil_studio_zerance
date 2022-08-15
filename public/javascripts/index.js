@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     iconsMenu.forEach((iconMenu) => {
         iconMenu.addEventListener('click', (e) => {
-            console.log('this', e.currentTarget);
             if(menuMobile.classList.contains('open')) {
                 closeMenuMobile();
 
@@ -36,7 +35,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     };
     contactAnchors.forEach((contactAnchor) => {
         contactAnchor.addEventListener('click', () => {
-            console.log('conatctAnhor clicked');
             let overlayContact = document.querySelector('#form-contact .overlay');
 
             closeMenuMobile();
